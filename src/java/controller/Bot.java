@@ -60,7 +60,8 @@ public class Bot extends HttpServlet {
         for (WebhookEntry entry : webhookObj.getEntryList()) {
             if (entry.getMessaging() != null) {
                 for (MessagingItem mItem : entry.getMessaging()) {
-                    //if recive a message
+                    //if user send message to the bot
+                    
                     if (mItem.getMessage() != null && mItem.getMessage().getText() != null) {
                         String senderId = mItem.getSender().getId();
                         IdMessageRecipient recipient = new IdMessageRecipient(senderId);
